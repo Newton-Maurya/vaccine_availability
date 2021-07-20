@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 const app = express()
 const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require("path");
 const fs = require('fs');
 const port = process.env.PORT || 8040
 
@@ -40,9 +41,9 @@ const StateDistrictName = mongoose.model('statedistrictname', StateDistrictNameS
 
 
 app.use(express.static(path.join(__dirname, './client/build')))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build'))
-})
+app.get("*", function (request, response) {
+    response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+  });
 app.listen(port, () => {
     console.log(`Succeddfully connected on port ${port}`)
 }
