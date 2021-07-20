@@ -39,9 +39,9 @@ const StateDistrictName = mongoose.model('statedistrictname', StateDistrictNameS
 // Routing
 
 
- if(process.env.NODE.ENV === "production"){
-     app.use(express.static("client/build"))
- }
+//  if(process.env.NODE.ENV === "production"){
+//      app.use(express.static("client/build"))
+//  }
 app.listen(port, () => {
     console.log(`Succeddfully connected on port ${port}`)
 }
