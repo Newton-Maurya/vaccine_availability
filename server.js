@@ -39,7 +39,9 @@ const StateDistrictName = mongoose.model('statedistrictname', StateDistrictNameS
 
 // Routing
 
-
+app.get('/', (req, res) => {
+    res.status(200).send(JSON.stringify({'Hello':'newton'})
+})
 app.use(express.static(path.join(__dirname, './client/build')))
 app.get("*", function (request, response) {
     response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
