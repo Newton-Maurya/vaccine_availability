@@ -42,10 +42,10 @@ const StateDistrictName = mongoose.model('statedistrictname', StateDistrictNameS
 app.get('/', (req, res) => {
     res.status(200).send(JSON.stringify({'Hello':'newton'}))
 })
-app.use(express.static(path.join(__dirname, './client/build')))
-app.get("*", function (request, response) {
-    response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-  });
+// app.use(express.static(path.join(__dirname, './client/build')))
+// app.get("*", function (request, response) {
+//     response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+//   });
 app.listen(port, () => {
     console.log(`Succeddfully connected on port ${port}`)
 }
