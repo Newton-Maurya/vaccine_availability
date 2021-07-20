@@ -39,9 +39,9 @@ const StateDistrictName = mongoose.model('statedistrictname', StateDistrictNameS
 // Routing
 
 
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, '../client/build')))
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build'))
+    res.sendFile(path.join(__dirname, '../client/build'))
 })
 app.listen(port, () => {
     console.log(`Succeddfully connected on port ${port}`)
