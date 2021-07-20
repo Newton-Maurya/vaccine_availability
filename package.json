@@ -1,0 +1,28 @@
+{
+  "name": "cowinbackend",
+  "version": "1.0.0",
+  "description": "This is used as backend api for cowin app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && run run build --prefix client"
+  },
+  "keywords": [
+    "newton"
+  ],
+  "author": "newton",
+  "license": "ISC",
+  "dependencies": {
+    "@vonage/server-sdk": "^2.10.10",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.15",
+    "nexmo": "^2.9.1",
+    "nodemailer": "^6.6.2",
+    "textbelt": "^0.0.4"
+  }
+}
