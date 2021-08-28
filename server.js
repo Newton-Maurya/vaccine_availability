@@ -43,7 +43,7 @@ app.get("*", function (request, response) {
     response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
   });
 app.listen(port, () => {
-    console.log(`Succeddfully connected on port ${port}`)
+    console.log(`Successfully connected on port ${port}`)
 }
 )
 app.post('/', async (req, res) => {
